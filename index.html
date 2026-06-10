@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3x3 숫자 퍼즐</title>
+<style>
+    body {
+        text-align: center;
+    }
+
+    input[type=button] {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        margin: 2px;
+    }
+</style>
+<script>
+    function move(n) {
+        if (n == 1) {
+            if (b2.value == " ") 
+            { b2.value = b1.value; b1.value = " "; }
+            else if (b4.value == " ") 
+            { b4.value = b1.value; b1.value = " "; }
+        }
+        else if (n == 2) {
+            if (b1.value == " ") 
+            { b1.value = b2.value; b2.value = " "; }
+            else if (b3.value == " ") 
+            { b3.value = b2.value; b2.value = " "; }
+            else if (b5.value == " ") 
+            { b5.value = b2.value; b2.value = " "; }
+        }
+        else if (n == 3) {
+            if (b2.value == " ") 
+            { b2.value = b3.value; b3.value = " "; }
+            else if (b6.value == " ") 
+            { b6.value = b3.value; b3.value = " "; }
+        }
+        else if (n == 4) {
+            if (b1.value == " ") 
+            { b1.value = b4.value; b4.value = " "; }
+            else if (b5.value == " ") 
+            { b5.value = b4.value; b4.value = " "; }
+            else if (b7.value == " ") 
+            { b7.value = b4.value; b4.value = " "; }
+        }
+        else if (n == 5) {
+            if (b2.value == " ") 
+            { b2.value = b5.value; b5.value = " "; }
+            else if (b4.value == " ") 
+            { b4.value = b5.value; b5.value = " "; }
+            else if (b6.value == " ") 
+            { b6.value = b5.value; b5.value = " "; }
+            else if (b8.value == " ") 
+            { b8.value = b5.value; b5.value = " "; }
+        }
+        else if (n == 6) {
+            if (b3.value == " ") 
+            { b3.value = b6.value; b6.value = " "; }
+            else if (b5.value == " ") 
+            { b5.value = b6.value; b6.value = " "; }
+            else if (b9.value == " ") 
+            { b9.value = b6.value; b6.value = " "; }
+        }
+        else if (n == 7) {
+            if (b4.value == " ") 
+            { b4.value = b7.value; b7.value = " "; }
+            else if (b8.value == " ") 
+            { b8.value = b7.value; b7.value = " "; }
+        }
+        else if (n == 8) {
+            if (b5.value == " ") 
+            { b5.value = b8.value; b8.value = " "; }
+            else if (b7.value == " ") 
+            { b7.value = b8.value; b8.value = " "; }
+            else if (b9.value == " ") 
+            { b9.value = b8.value; b8.value = " "; }
+        }
+        else if (n == 9) {
+            if (b6.value == " ") 
+            { b6.value = b9.value; b9.value = " "; }
+            else if (b8.value == " ") 
+            { b8.value = b9.value; b9.value = " "; }
+        }
+    }
+</script>
+</head>
+<body>
+    <h3>3x3 슬라이드 퍼즐 이동</h3>
+    <hr>
+    <div>
+        <input type="button" id="b1" value="1" onclick="move(1)">
+        <input type="button" id="b2" value="2" onclick="move(2)">
+        <input type="button" id="b3" value="3" onclick="move(3)"><br>
+        <input type="button" id="b4" value="4" onclick="move(4)">
+        <input type="button" id="b5" value="5" onclick="move(5)">
+        <input type="button" id="b6" value="6" onclick="move(6)"><br>
+        <input type="button" id="b7" value="7" onclick="move(7)">
+        <input type="button" id="b8" value="8" onclick="move(8)">
+        <input type="button" id="b9" value=" " onclick="move(9)">
+    </div>
+</body>
+</html>
